@@ -16,6 +16,12 @@ fi
 
 cd "$REPO_DIR" || exit 1
 
+# Lägg till ändringar
+git add .
+
+# Commit med tidsstämpel
+git commit -m "Backup av /etc: $(date +'%Y-%m-%d %H:%M:%S')"
+
 # Push
 git push
 
